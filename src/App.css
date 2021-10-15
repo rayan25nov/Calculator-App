@@ -1,38 +1,73 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Fira Sans", sans-serif;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  background-color: #eee;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.Calc {
+  align-items: center;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  min-height: 60vh;
+  justify-content: space-evenly;
 }
-
-.App-link {
-  color: #61dafb;
+.calculator {
+  width: "100%";
+  max-width: "400px";
+  background-color: "#FFF";
+  border-radius: "16px";
+  overflow: hidden;
+  box-shadow: 0px 2px 64px rgba(0, 0, 0, 0.2);
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.display {
+  padding: 16px;
+  margin-bottom: 10px;
+  text-align: right;
+  background-color: #131a26;
+  color: #eee;
+  font-size: 30px;
+  font-weight: 300;
+}
+.display span {
+  font-size: 14px;
+  color: #888;
+}
+Button {
+  cursor: pointer;
+  transition: 0.4s;
+}
+Button:hover {
+  opacity: 0.9;
+}
+.operators {
+  display: flex;
+}
+.operators Button {
+  flex: 1 1 0%;
+  background-color: #d81e5b;
+  font-size: 25px;
+  font-weight: 700;
+  min-height: 10vh;
+}
+.numbers,
+.digits {
+  display: flex;
+  flex-wrap: wrap;
+}
+.numbers Button {
+  flex: 1 1 33.333%;
+  font-size: 20px;
+  max-width: 33.333%;
+  background-color: #131a26;
+  min-height: 10vh;
+}
+.digits Button {
+  flex: 1 1 25%;
+  font-size: 25px;
+  max-width: 25%;
+  background-color: #131a26;
+  min-height: 10vh;
 }
