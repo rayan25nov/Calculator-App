@@ -55,7 +55,7 @@ const App = () => {
     setCalc(res);
   };
   const deleteLast = () => {
-    if (calc == "") {
+    if (calc === "") {
       return;
     }
     const val = calc.slice(0, -1);
