@@ -38,6 +38,7 @@ const App = () => {
     setCalc(calc + value);
 
     if (!operator.includes(value)) {
+      // eslint-disable-next-line
       setResult(eval(calc + value).toString());
     }
   };
@@ -50,7 +51,7 @@ const App = () => {
     ) {
       return setCalc(calc.slice(0, calc.length - 1));
     }
-
+    // eslint-disable-next-line
     const res = eval(calc).toString();
     setCalc(res);
   };
